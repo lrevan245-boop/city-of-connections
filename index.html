@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOTOR III — Echoes of Silence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="stars"></div>
+    
+    <main class="app-shell">
+      <!-- Left Navigation Sidebar -->
+      <aside class="sidebar">
+        <a class="brand" href="#top"><span class="brand-mark">✦</span><span>KOTOR <em>III</em></span></a>
+        <div class="eyebrow">Campaign archive</div>
+        <nav id="chapter-nav" class="chapter-nav"></nav>
+        <div class="sidebar-foot"><span class="pulse"></span>REPUBLIC NETWORK<br><small>STATUS: COMPROMISED</small></div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <section class="content" id="top">
+        <header class="topbar">
+          <span class="eyebrow">JEDI ARCHIVES / 3951 BBY</span>
+          <button id="codex-toggle" class="icon-btn" aria-label="Open codex">◎ <span>CODEX</span></button>
+        </header>
+        
+        <!-- Single dynamic view container -->
+        <main id="chapter-view" class="chapter-view"></main>
+      </section>
+
+      <!-- Codex Drawer Sidebar -->
+      <aside id="codex" class="codex" aria-label="Story codex">
+        <div class="codex-head">
+          <div><div class="eyebrow">Character records</div><h2>CODEX</h2></div>
+          <button id="codex-close" class="close-btn">×</button>
+        </div>
+        <div class="codex-tabs">
+          <button class="active" data-codex="characters">Characters</button>
+          <button data-codex="clues">Clues</button>
+        </div>
+        <div id="codex-body"></div>
+      </aside>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
